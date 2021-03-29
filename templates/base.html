@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>{% block title %}{% endblock title %}</title>
+  <style>
+    .fas {
+      font-size: 3rem;
+    }
+  </style>
+  {% block css %}{% endblock css %}
+</head>
+<header class="text-gray-400 bg-gray-900 body-font border-b border-gray-800"">
+  <div class=" container mx-auto flex flex-wrap p-5 flex-col md:flex-row mx-auto items-center">
+  <a href="/" class="flex title-font items-center mx-auto text-white mb-4 md:mb-0">
+    <h1 style="font-size: 1.8rem;">
+      <span style="color: Dodgerblue;"><i class="fa fa-download" aria-hidden="true"></i></span> UtubeDownloader
+    </h1>
+  </a>
+  </div>
+</header>
+
+{% block body %}{% endblock body %}
+<section class="text-gray-400 bg-gray-900 body-font border-t border-gray-800">
+  <div class="container px-5 py-5 mx-auto">
+    <div class="flex flex-col text-center w-full mb-5">
+      <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4">How to Download the Video?
+      </h1>
+      <div class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+        <nav class="flex flex-col sm:items-start sm:text-left text-center items-center -mb-1 space-y-2">
+          <p>
+            <span class="bg-gray-800 text-indigo-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span> Enter valid YouTube url into the search box.
+          </p>
+          <p>
+            <span class="bg-gray-800 text-indigo-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Click on "Download" button
+          </p>
+          <p>
+            <span class="bg-gray-800 text-indigo-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Select Video or Audio
+          </p>
+          <p>
+            <span class="bg-gray-800 text-indigo-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="w-3 h-3" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"></path>
+              </svg>
+            </span>Then click "Download" button, for which you want to download
+          </p>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text-gray-400 bg-gray-900 body-font border-t border-gray-800">
+  <div class="container px-5 py-10 mx-auto">
+    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
+      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 class="text-white text-lg title-font font-medium mb-2">Unlimited Free Download</h2>
+        <p class="leading-relaxed text-base">We do not charge you up for any kind of downloads</p>
+      </div>
+      <div
+        class="sm:w-32 order-first sm:order-none sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+        <i class="fas fa-money-check-alt"></i>
+      </div>
+    </div>
+    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
+
+      <div
+        class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+        <i class="fas fa-meteor"></i>
+      </div>
+      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 class="text-white text-lg title-font font-medium mb-2">Faster and Easy to Download</h2>
+        <p class="leading-relaxed text-base">Just Paste the link and Get the Video</p>
+      </div>
+    </div>
+    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col">
+      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 class="text-white text-lg title-font font-medium mb-2">Supports multiple file formats</h2>
+        <p class="leading-relaxed text-base">We support all video and audio formats conversion. You can easily convert
+          YouTube videos to MP3, MP4, WMA and M4A formats, etc.</p>
+      </div>
+      <div
+        class="sm:w-32 order-first sm:order-none sm:h-32 h-20 w-20 sm:ml-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+        <i class="fas fa-compact-disc"></i>
+      </div>
+    </div>
+    <div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+      <div
+        class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full text-indigo-400 bg-gray-800 flex-shrink-0">
+        <i class="fas fa-laptop"></i>
+      </div>
+      <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+        <h2 class="text-white text-lg title-font font-medium mb-2">Supports all Kinds of Devices</h2>
+        <p class="leading-relaxed text-base">We support all device platforms. Easy to convert YouTube videos to MP3
+          files regardless of whether you are using Windows, Mac or Linux, Android, iPhone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="text-gray-400 bg-gray-900 body-font border-t border-gray-800">
+  <div class="container px-12 py-5 mx-auto flex items-center sm:flex-row flex-col">
+    <a class="flex title-font font-medium items-center md:justify-start justify-center text-white" href="/">
+      <span style="font-size: 1.8rem; color: Dodgerblue;"><i class="fa fa-download" aria-hidden="true"></i></span>
+      <span class="ml-3 text-xl">UtubeDownloader</span>
+    </a>
+    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2021 UtubeDownloader</p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start" style="font-size: 1.6rem;">
+      <a class="ml-3 text-gray-400" href="https://github.com/Rakeshgombi/UtubeDownloader" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a class="ml-3 text-gray-400" href="https://www.instagram.com/_.__no.one_.__/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="ml-3 text-gray-400" href="https://in.linkedin.com/in/rakesh-gombi-8b8412170" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </span>
+  </div>
+</footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+{% block js %}
+
+{% endblock js %}
+
+</html>
