@@ -25,7 +25,7 @@ SECRET_KEY = 'la%+o=8i48-v+(6(ru9_bzz*lyz%s(q4l--ppuab5(&z$2yn14'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['utubedownoader.herokuapp.com']
+ALLOWED_HOSTS = ['utubedownoader.herokuapp.com', 'utubedownoader.rocks']
 
 # Application definition
 
