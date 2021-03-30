@@ -79,7 +79,7 @@
           </thead>
           <tbody>
             {% for s in vidStreams %}
-            {% if s.mediatype == "video" %}
+            {% if s.mediatype == "normal" %}
             <tr>
               <td class="px-1 py-3">{{s.quality}} (.{{s.extension}})</td>
               {% if s.get_filesize|div:1024 > 1024 %}
