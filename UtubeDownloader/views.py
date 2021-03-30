@@ -13,6 +13,6 @@ def search(request):
     url = index(request)
     video = pafy.new(url)
     title = video.title
-    vidStreams = video.streams
+    vidStreams = video.allstreams
     audStreams = video.audiostreams
     return render(request, "search.html", {"vidStreams": vidStreams, 'audStreams': audStreams, 'url': url, 'title': title})
