@@ -49,7 +49,7 @@
 {% endblock css %}
 {% block body %}
 <section class="text-gray-400 bg-gray-900 body-font" id="download">
-  <div class="container mx-auto flex px-5 md:flex-row flex-col">
+  <div class="container mx-auto flex px-5 md:flex-row flex-col" id="result">
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-1 mt-20 mx-auto small md:mb-0">
       <iframe style="width: 100%; height: 100%;" id="videoObject" src="" title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -80,11 +80,11 @@
           <tbody>
             {% for s in vidStreams %}
             <tr>
-              <td class="px-1 py-3">{{s.quality}} (.{{s.extension}})</td>
-              {% if s.get_filesize|div:1024 > 1024 %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|div:1024|add_decimal:1}} MB</td>
+              <td class="px-1 py-3">{{s.resolution}} (.{{s.mime_type}})</td>
+              {% if s.filesize|div:1024 > 1024 %}
+              <td class="px-1 py-3">{{s.filesize|div:1024|div:1024|add_decimal:1}} MB</td>
               {% else %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|add_decimal:1}} KB</td>
+              <td class="px-1 py-3">{{s.filesize|div:1024|add_decimal:1}} KB</td>
               {% endif %}
               <td class="px-1 py-3">
                 <div class="mx-auto">
@@ -110,11 +110,11 @@
           <tbody>
             {% for s in audStreams %}
             <tr>
-              <td class="px-1 py-3">{{s.bitrate}} (.{{s.extension}})</td>
-              {% if s.get_filesize|div:1024 > 1024 %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|div:1024|add_decimal:1}} MB</td>
+              <td class="px-1 py-3">{{s.abr}} ({{s.mime_type}})</td>
+              {% if s.filesize|div:1024 > 1024 %}
+              <td class="px-1 py-3">{{s.filesize|div:1024|div:1024|add_decimal:1}} MB</td>
               {% else %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|add_decimal:1}} KB</td>
+              <td class="px-1 py-3">{{s.filesize|div:1024|add_decimal:1}} KB</td>
               {% endif %}
               <td class="px-1 py-3">
                 <div class="mx-auto">
@@ -142,10 +142,15 @@
     var match = url.match(regExp);
     if (match && match[2].length == 11) {
       $('#videoObject').attr('src', 'https://www.youtube.com/embed/' + match[2] + '?autoplay=0&enablejsapi=1');
-    } else {
-      alert('not valid');
     }
   }
+  {% if thank %}
+  $("#result").show()
+  {% else %}
+  $("#result").hide()
+  $("#download").append("<h1 class='container py-10' style='font-size:1.5rem; text-align: center;'>No Video Found at this URL</h1>")
+
+  {% endif %}
   function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -159,8 +164,9 @@
     document.getElementById(cityName).style.display = "";
     evt.currentTarget.className += " active";
   }
-
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
+
+
 </script>
 {% endblock js %}
