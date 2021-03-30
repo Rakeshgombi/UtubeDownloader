@@ -80,11 +80,11 @@
           <tbody>
             {% for s in vidStreams %}
             <tr>
-              <td class="px-1 py-3">{{s.quality}} (.{{s.extension}})</td>
-              {% if s.get_filesize|div:1024 > 1024 %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|div:1024|add_decimal:1}} MB</td>
+              <td class="px-1 py-3">{{s.resolution}} (.{{s.mime_type}})</td>
+            {% if s.filesize|div:1024 > 1024 %}
+              <td class="px-1 py-3">{{s.filesize|div:1024|div:1024|add_decimal:1}} MB</td>
               {% else %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|add_decimal:1}} KB</td>
+              <td class="px-1 py-3">{{s.filesize|div:1024|add_decimal:1}} KB</td>
               {% endif %}
               <td class="px-1 py-3">
                 <div class="mx-auto">
@@ -110,11 +110,11 @@
           <tbody>
             {% for s in audStreams %}
             <tr>
-              <td class="px-1 py-3">{{s.bitrate}} (.{{s.extension}})</td>
-              {% if s.get_filesize|div:1024 > 1024 %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|div:1024|add_decimal:1}} MB</td>
+              <td class="px-1 py-3">{{s.abr}} ({{s.mime_type}})</td>
+              {% if s.filesize|div:1024 > 1024 %}
+              <td class="px-1 py-3">{{s.filesize|div:1024|div:1024|add_decimal:1}} MB</td>
               {% else %}
-              <td class="px-1 py-3">{{s.get_filesize|div:1024|add_decimal:1}} KB</td>
+              <td class="px-1 py-3">{{s.filesize|div:1024|add_decimal:1}} KB</td>
               {% endif %}
               <td class="px-1 py-3">
                 <div class="mx-auto">
@@ -143,15 +143,15 @@
     if (match && match[2].length == 11) {
       $('#videoObject').attr('src', 'https://www.youtube.com/embed/' + match[2] + '?autoplay=0&enablejsapi=1');
     }
-    else ("No Video Found at this URL: Invalid URL")
+    else("No Video Found at this URL: Invalid URL")
   }
-  {% if thank %}
+   {% if thank %}
   $("#result").show()
   {% else %}
   $("#result").hide()
-  $("#download").append("<h1 class='container py-10' style='font-size:1.5rem; text-align: center;'>No Video Found at this URL, or it is Copyrighted</h1>")
-
-  {% endif %}
+  $("#download").append("<h1 class='container py-10' style='font-size:1.5rem; text-align: center;'>No Video Found at this URL</h1>")
+  
+  {% endif %} 
   function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
