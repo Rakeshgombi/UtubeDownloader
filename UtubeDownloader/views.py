@@ -1,5 +1,5 @@
-import pafy
 from django.shortcuts import render
+from pytube import YouTube
 
 
 def index(request):
@@ -12,12 +12,19 @@ def index(request):
 def search(request):
     url = index(request)
     try:
-        video = pafy.new(url)
-        title = video.title
-        vidStreams = video.streams
-        audStreams = video.audiostreams
+        yt = YouTube(url)
+        vidStreams = yt.streams.filter(progressive=True)
+        title = yt.title
+        audStreams = yt.streams.filter(only_audio=True)
         thank = True
-        return render(request, "search.html", {"vidStreams": vidStreams, 'audStreams': audStreams, 'url': url, 'title': title, 'thank': thank})
+        return render(
+            request, "search.html", {
+                "vidStreams": vidStreams,
+                'audStreams': audStreams,
+                'url': url,
+                'title': title,
+                'thank': thank
+            })
     except:
         thank = False
         return render(request, "search.html", {"thank": thank})
