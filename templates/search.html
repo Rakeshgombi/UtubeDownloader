@@ -79,6 +79,7 @@
           </thead>
           <tbody>
             {% for s in vidStreams %}
+            {% if s.mediatype == 'normal' %}
   
             <tr>
               <td class="px-1 py-3">{{s.quality}} (.{{s.extension}})</td>
@@ -95,6 +96,7 @@
                 </div>
               </td>
             </tr>
+            {% endif %)
 
             {% endfor %}
           </tbody>
