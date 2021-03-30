@@ -17,14 +17,8 @@ def search(request):
         title = yt.title
         audStreams = yt.streams.filter(only_audio=True)
         thank = True
-        return render(
-            request, "search.html", {
-                "vidStreams": vidStreams,
-                'audStreams': audStreams,
-                'url': url,
-                'title': title,
-                'thank': thank
-            })
-    except:
+        return render(request, "search.html", {"vidStreams": vidStreams,'audStreams': audStreams, 'url': url, 'title': title, 'thank': thank})
+    except Exception:
+        print(Exception)
         thank = False
         return render(request, "search.html", {"thank": thank})
