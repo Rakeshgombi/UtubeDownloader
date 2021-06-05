@@ -8,10 +8,10 @@
 - Then click "Download" button, for which you want to download
 
 ## Why to use this app?
-1. Unlimited Free Download
-2. Faster and Easy to Download
-3. Supports multiple file formats
-4. Supports all Kinds of Devices
+- Unlimited Free Download
+- Faster and Easy to Download
+- Supports multiple file formats
+- Supports all Kinds of Devices
 
 ## Check this app on http://utubedownloader.herokuapp.com/
 
