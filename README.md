@@ -15,4 +15,4 @@
 
 ## Check this app on http://utubedownloader.herokuapp.com/
 
-[logo]: https://user-images.githubusercontent.com/57813852/120884236-7f6b4180-c5ff-11eb-897a-6e826755c895.png "UtubeDownloader Logo" 
+[logo]: https://user-images.githubusercontent.com/57813852/120884340-497a8d00-c600-11eb-9d74-5d372ba5fd89.png "UtubeDownloader Logo" 
