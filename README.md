@@ -9,12 +9,8 @@
 
 ## Why to use this app?
 1. Unlimited Free Download
-⋅⋅⋅We do not charge you up for any kind of downloads.
 2. Faster and Easy to Download
-⋅⋅⋅Just Paste the link and Get the Video.
 3. Supports multiple file formats
-⋅⋅⋅We support all video and audio formats conversion. You can easily convert YouTube videos to MP3, MP4, WMA and M4A formats, etc.
 4. Supports all Kinds of Devices
-⋅⋅⋅We support all device platforms. Easy to convert YouTube videos to MP3 files regardless of whether you are using Windows, Mac or Linux, Android, iPhone.
 
 ## Check this app on http://utubedownloader.herokuapp.com/
