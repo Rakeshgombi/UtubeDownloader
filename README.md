@@ -1,4 +1,4 @@
-# ![alt text][logo] UtubeDownloader
+# ![alt text][gitlogo] UtubeDownloader
 #### UtubeDownloader helps you download any YouTube video in the best quality. Download YouTube videos in MP3, MP4, M4A, and many more formats. Our downloader is for free and does not require any software or registration.
 
 ## How to Download the Video?
@@ -15,4 +15,4 @@
 
 ## Check this app on http://utubedownloader.herokuapp.com/
 
-[logo]: https://user-images.githubusercontent.com/57813852/120884340-497a8d00-c600-11eb-9d74-5d372ba5fd89.png "UtubeDownloader Logo" 
+[gitlogo]: https://user-images.githubusercontent.com/57813852/120884369-79299500-c600-11eb-94fb-56031b08943f.png "UtubeDownloader Logo" 
